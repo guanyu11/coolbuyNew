@@ -8,7 +8,7 @@ export const HomeFixed =styled.div`
     height: .72rem;
     display: flex;
     align-items: center;
-    background-color: powderblue;
+    background-color: #fff;
     margin-bottom: .16rem;
 
     i {

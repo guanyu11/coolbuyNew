@@ -10,12 +10,12 @@ let defaultState =immutable.fromJS({
 
 export default handleActions({
     [VendorIndexType]:(state,actions)=>{
-        console.log(actions,"VendorIndexType action")
+        // console.log(actions,"VendorIndexType action")
         return state.updateIn(["vendorList"],_=>actions.data.objects||[])
     },
     [VendorDetailType]:(state,actions)=>{
-        console.log(11111,"1111111VendorDetailType action")
-        console.log(actions,"VendorDetailType action")
+        // console.log(11111,"1111111VendorDetailType action")
+        // console.log(actions,"VendorDetailType action")
         return state.updateIn(["vendorDetail"],_=>actions.data)
     },
 },defaultState)

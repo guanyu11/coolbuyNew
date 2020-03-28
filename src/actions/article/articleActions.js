@@ -18,11 +18,12 @@ export const asyncArticleMainAction=(id)=>{
         type:ArticleAboutType,
         data
     })
+    
     return async (dispatch)=>{
         let main =await ArticleMainApi(id);
         let about =await ArticleAboutApi(aboutQuery);
         // let preview =main.component[2].
-        console.log(main,about)
+        // console.log(main,about)
         dispatch(ArticleMainAction(main))
         dispatch(ArticleAboutAction(about))
 

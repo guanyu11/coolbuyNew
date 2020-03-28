@@ -9,7 +9,7 @@ color:#fff;
        width: 100%;
        position: fixed;
        top: 0;
-       z-index: -8;
+       z-index: 0;
  
        img {
           width: 100%;
@@ -19,6 +19,8 @@ color:#fff;
  
     .vendorDetailcon {
        margin-top: 5.5rem;
+       position: relative;
+       z-index: 9;
     }
  
     .vendor-head {

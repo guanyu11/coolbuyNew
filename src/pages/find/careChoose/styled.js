@@ -1,9 +1,13 @@
 import styled from "styled-components"
 
 export const CareChoosediv=styled.div`
-padding: 0  .32rem ;
+width:100%;
+height:100%;
+overflow:hidden;
+position:absolute;
+padding:.8rem .32rem 1rem ;
+top:0;
 .con .article-item{
-     
     display: flex;
     padding-bottom: .42rem;
     margin-top: .42rem;
@@ -76,6 +80,9 @@ padding: 0  .32rem ;
     height: 2.14rem;
    
 }
-
+.addMore{
+    height:.4rem;
+    text-align:center;
+}
 
 `

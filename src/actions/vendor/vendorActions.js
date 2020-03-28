@@ -11,10 +11,10 @@ export const VendorIndexAsyncAction = (query)=> {
         data
     })
     if(query.id){
-        console.log(query.id)
+        // console.log(query.id)
         return async (dispatch)=>{
             let data = await vendorDetailApi(query.id);
-            console.log(data,"HomeBannerAsyncAction")
+            // console.log(data,"HomeBannerAsyncAction")
             dispatch(VendorDetailAction(data))
         } 
     }else{
@@ -22,7 +22,7 @@ export const VendorIndexAsyncAction = (query)=> {
      return async (dispatch)=>{
       
         let data = await vendorIndexApi(query);
-        console.log(data,"HomeBannerAsyncAction")
+        // console.log(data,"HomeBannerAsyncAction")
         dispatch(VendorIndexAction(data))
     }   
     }

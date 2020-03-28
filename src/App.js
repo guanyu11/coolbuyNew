@@ -11,7 +11,7 @@ import {
   Article,
   CareChoose,
    HotArticle ,
-   Vendordetail
+   Vendordetail,
 } from "@pages"
  class App extends Component {
   render() {
@@ -19,7 +19,8 @@ import {
 
       <Switch>
         <Redirect from="/" to="/home" exact></Redirect>
-        <Route path="/home" component={Home}/>
+        <Route path="/home" component={Home} exact/>
+        <Route path="/home/:id" component={Home}/>
         <Route path="/cart" component={Cart}/>
         <Route path="/mine" component={Mine}/>
         <Route path="/classify" component={Classify}/>

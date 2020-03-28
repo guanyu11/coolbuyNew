@@ -1,6 +1,10 @@
 export default{
     home:{
-        banner:"api/v1.4/campaign_banner"
+        banner:"api/v1.4/campaign_banner",
+        activity:"api/v1.4/shelf",
+        category:"api/v1.4/category",
+        mediumList:"api/v1.4/shelf_preview"
+       
     },
     vendor:{
         index:"api/v3/canton/vendor/",

@@ -19,7 +19,7 @@ class vendor extends Component {
         }
     }
     render() {
-        console.log(this.props,"vendorProps")
+        // console.log(this.props,"vendorProps")
         let { vendorList,vendorDetail } = this.props;
         // console.log(vendorList, "vendorList")
         // console.log(vendorDetail, "vendorDetail")
@@ -47,7 +47,7 @@ class vendor extends Component {
         
     }
     componentWillReceiveProps(){
-        console.log("props变化了")
+        // console.log("props变化了")
 
         // this.foreUpdate()
 

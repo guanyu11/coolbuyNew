@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { ArticleMainDiv } from "./styled"
 class MainText extends Component {
     render() {
-        console.log(this.props, "mainmain")
+        // console.log(this.props, "mainmain")
         let { main } = this.props;
         if (!main.component) {
             return ""
@@ -13,7 +13,7 @@ class MainText extends Component {
                     <img className="article-image"
                         src={main.cover_image} />
                     <div className="titleone">
-                        撩倒女神的固体香水，堪称行走的「荷尔蒙」
+                        {main.title}
                      </div>
                     <div className="playThing">
                         <img

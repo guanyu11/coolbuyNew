@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux"
-import{Link}from "react-router-dom"
+import { Link } from "react-router-dom"
 import { mapStateToProps, mapDispatchToProps } from "../connect"
 import { CareChoosediv } from "./styled"
+import BScrollCom from "@common/scroll"
+
 @connect(mapStateToProps, mapDispatchToProps)
 class CareChoose extends Component {
     constructor() {
@@ -20,37 +22,40 @@ class CareChoose extends Component {
         // console.log(this.props, "this.props carechoose")
         let { articleList } = this.props;
         // console.log(articleList, "articleList")
-    
+
         return (
+
             <CareChoosediv>
+                <BScrollCom ref="chooseScroll">
                 <div className="con">
                     {/* <!-- con为文章卡片的大容器  --> */}
                     {/* <!-- 文章卡片 只有一张图片时 --> */}
                     {articleList.map((item) => {
                         {
-                            return item.cover_image.length!=3? <Link to={"/article/"+item.id} key={item.id} className="article-item">
+                            return item.cover_image.length != 3 ? <Link to={"/article/" + item.id} key={item.id} className="article-item">
                                 <div className="detail">
                                     <div className="title">{item.title}</div>
                                     <div className="tab">
                                         {
-                                            item.tag.map((child,index)=> (<div key={index}>{child}</div>))
+                                            item.tag.map((child, index) => (<div key={index}>{child}</div>))
                                         }
                                     </div>
                                 </div>
                                 <img className="img" src={item.cover_image} alt="" />
-                            </Link> : <Link  to={"/article/"+item.id} key={item.id} className="article-item">
+                            </Link> : <Link to={"/article/" + item.id} key={item.id} className="article-item">
                                     <div className="col-detail detail">
                                         <div className="title">{item.title}</div>
                                         <div className="img-con">
                                             {
-                                                item.cover_image.map((child,index)=>( <img key={index} src={child}/> )) 
+                                                item.cover_image.map((child, index) => (<img key={index} src={child} />))
                                             }
-                                            
-                                            
+
+
                                         </div>
                                         <div className="tab">
-                                            <div>年货</div>
-                                            <div>家居好物</div>
+                                            {
+                                                item.tag.map((child, index) => (<div key={index}>{child}</div>))
+                                            }
                                         </div>
                                     </div>
                                 </Link>
@@ -59,15 +64,33 @@ class CareChoose extends Component {
                     )
                     }
                     {/* <!-- 文章卡片 有多张图片时 --> */}
-
+                    <div className="addMore">
+                        加载更多...
+                    </div>
                 </div>
+                </BScrollCom>
             </CareChoosediv>
         )
     }
 
     componentDidMount() {
         this.props.handleCareChooseIndex(this.state.query)
+        this.refs.chooseScroll.handlepullingUp(this.handleAddMore.bind(this))
     }
+  async handleAddMore(){
+      console.log(1111)
+       await this.setState({
+            query: {
+                offset:this.state.query.offset+this.state.query.limit,
+                page_type: "article",
+                limit: 10,
+                order_by: "-published_at"
+            }
+        })
+        this.props.handleCareChooseIndex(this.state.query)
+
+    }
+
 
 }
 export default CareChoose

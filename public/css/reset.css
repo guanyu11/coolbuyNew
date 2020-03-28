@@ -54,10 +54,14 @@ body {
     color: #333;
     font: 12px Arial,"Microsoft Yahei",sans-serif;
     background: #fff;
+    
 }
-
+#root{
+    width: 100%;
+    overflow-x: hidden;
+}
 a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
 }
 
