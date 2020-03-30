@@ -5,15 +5,13 @@ export const Home =loadable({
   loader:_=>import("./home"),
   loading:Loading
 })
-
-
 export const Classify =loadable({
   loader:_=>import("./classify"),
   loading:Loading
 })
 export const Mine =loadable({
   loader:_=>import("./mine"),
-  loading:Loading 
+  loading:Loading
 })
 export const Cart =loadable({
   loader:_=>import("./cart"),
@@ -35,12 +33,26 @@ export const Vendor =loadable({
   loader:_=>import("./vendor"),
   loading:Loading
 })
-export const Vendordetail =loadable({
-  loader:_=>import("./vendor/vendorDetail"),
+export const Article =loadable({
+  loader:_=>import("./article"),
   loading:Loading
 })
 
-export const Article =loadable({
-  loader:_=>import("./article"),
+export const GoodsList =loadable({
+  loader:_=>import("./goodsList"),
+  loading:Loading
+})
+
+export const Details =loadable({
+  loader:_=>import("./details"),
+  loading:Loading
+})
+
+export const Search =loadable({
+  loader:_=>import("./search"),
+  loading:Loading
+})
+export const  SearchContent =loadable({
+  loader:_=>import("./search/searchContent"),
   loading:Loading
 })

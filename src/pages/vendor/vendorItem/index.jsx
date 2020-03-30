@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { VenderItem } from "./styled"
+
 class Find extends Component {
     render() {
         let {item,index}=this.props
         return (
             <div>
-               <VenderItem key={item.id} >
+               <VenderItem >
                <div className="VendorItemCon" style={{ background: item.background_color }}>
                                 <div className="logoCon">
                                     <div className="logo">

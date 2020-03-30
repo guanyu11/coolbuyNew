@@ -14,7 +14,7 @@ export const HomeBanner =styled.div`
            width:.10rem;
            border-radius:0;
            background-color:rgba(f,f,f,1);
-           opcity:1;
+           /* opcity:1; */
            
         }   
         .swiper-pagination-bullet-active {

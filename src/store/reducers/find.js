@@ -8,12 +8,6 @@ let defaultData=immutable.fromJS({
 
 export default handleActions({
 [CareChooseIndexType]:(state,actions)=>{
-    console.log(actions,"CareChooseIndexType")
-    if(actions.data.length==20){
-        return state.updateIn(["articleList"],list=>actions.data)
-    }else{
-        return state.updateIn(["articleList"],list=>list.concat(actions.data))
-
-    }
+    return state.updateIn(["articleList"],_=>actions.data)
 }
 },defaultData)

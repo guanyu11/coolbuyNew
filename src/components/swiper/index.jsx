@@ -23,13 +23,13 @@ const config = {
     },
     on: {
         slideChange: function () {
-            // console.log(this.activeIndex);
+            console.log(this.activeIndex);
         },
     },
 };
 class Banner extends Component {
     render() {
-        // console.log(this.props)
+        console.log(this.props)
         let banner = this.props.banner
         return (
             <HomeBanner>

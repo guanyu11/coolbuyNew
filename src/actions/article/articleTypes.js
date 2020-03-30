@@ -1,2 +1,2 @@
-export const ArticleMainType="ARTICLE_MAINTEXT_TYPE"
-export const ArticleAboutType="ARTICLE_ABOUTITEM_TYPE"
+const ArticleMainType="ARTICLE_MAINTEXT_TYPE"
+const ArticleAboutType="ARTICLE_ABOUTITEM_TYPE"

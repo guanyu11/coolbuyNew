@@ -20,24 +20,47 @@ const get = (url, data) => {
         //默认值为credentials“ same-origin”
         credentials: "include",
         headers: {
-            'Accept': 'application/json, text/plain, */*',
+            'Accept': 'application/json, text/plain, */*'
         },
     }).then(res=> res.json())
     return result
 }
 
-const post = (url, data) => {
+
+const put = (url, data) => {
+    var result = fetchPro(url, {
+        method: "PUT",
+        credentials: "include",
+        headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json;charset=UTF-8'
+        },
+        body:JSON.stringify(data) 
+    })
+    if(url!=="/api/v1.4/shopping_cart/656448/"){
+        result=result.then(res=>res.json())
+    }
+    return result
+}
+const post = (url, data,options) => {
+    console.log(data)
     var result = fetchPro(url, {
         method: "POST",
         credentials: "include",
         headers: {
             'Accept': 'application/json, text/plain, */*',
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'Content-Type':options?options['Content-Type'] :'application/json;charset=UTF-8'
         },
-        body:myParams(data)
+        body:JSON.stringify(data) 
+       
     })
+    if(url!=="/api/v1.4/shopping_cart/"){
+        result=result.then(res=>res.json())
+    }
+    return result
 }
 export default {
     get,
+    put,
     post
 }

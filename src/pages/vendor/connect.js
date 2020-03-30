@@ -1,9 +1,7 @@
 import {VendorIndexAsyncAction} from "@actions/vendor/vendorActions"
 
 export const mapStateToProps=(state)=>({
-    vendorList:state.getIn(["vendor","vendorList"]),
-    vendorDetail:state.getIn(["vendor","vendorDetail"])
-    
+    vendorList:state.getIn(["vendor","vendorList"])
 })
 
 export const mapDispatchToProps=(dispatch)=>({

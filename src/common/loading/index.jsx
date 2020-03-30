@@ -1,11 +1,27 @@
 import React, { Component } from 'react'
-
-export default class index extends Component {
+import {LoadingContainer} from "./styled"
+export default class Loading extends Component {
     render() {
         return (
-            <div>
-                loading
-            </div>
+            <LoadingContainer className="loader">
+                <div className="loader-inner">
+                    <div className="loader-line-wrap">
+                        <div className="loader-line"></div>
+                    </div>
+                    <div className="loader-line-wrap">
+                        <div className="loader-line"></div>
+                    </div>
+                    <div className="loader-line-wrap">
+                        <div className="loader-line"></div>
+                    </div>
+                    <div className="loader-line-wrap">
+                        <div className="loader-line"></div>
+                    </div>
+                    <div className="loader-line-wrap">
+                        <div className="loader-line"></div>
+                    </div>
+                </div>
+            </LoadingContainer>
         )
     }
 }
