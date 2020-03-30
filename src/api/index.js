@@ -1,5 +1,6 @@
 export default{
     home:{
+        //xianz 现在有四个接口
         banner:"api/v1.4/campaign_banner",
         activity:"api/v1.4/shelf",
         category:"api/v1.4/category",
